@@ -1,0 +1,31 @@
+<!-- 1. 基本的数据渲染 -->
+<view>{{num}}</view>
+<view>{{str}}</view>
+
+<!-- 2. 数据绑定到属性上 -->
+<view id="{{id}}">我是view元素</view>
+
+<!-- 3. 关于布尔值的属性绑定,因为布尔值是关键字，所以必须用双大号括起来 -->
+<!-- <checkbox checked="true"></checkbox>
+<checkbox checked="false"></checkbox> -->
+<checkbox checked="{{true}}"></checkbox>
+<checkbox checked="{{isChecked}}"></checkbox> 
+
+<!-- 
+  4. 路径运算
+    访问数组和访问对象
+ -->
+<view>访问数组和对象</view>
+<view>{{arr[1]}}</view>
+<view>{{person.name}}   {{person.job}}</view>
+
+<view>--------------------------------</view>
+<!--
+   表达式
+   算术、拼接、三目、条件判断  不支持函数自执行
+ -->
+ <view>{{ 1+1 }}</view>
+ <view>{{ 'a' + str }}</view>
+ <view>{{ 5 > 10 ? 'ok' : 'no ok' }}</view>
+ <!-- <view>{{fn()}}</view>
+ <view>{{Math.random()}}</view> -->

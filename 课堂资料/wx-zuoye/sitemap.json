@@ -1,0 +1,15 @@
+{
+  "rules":[
+    {
+      "action":"disallow",
+      "page":"pages/01config/01config"
+    },
+    {
+      "action":"disallow",
+      "page":"pages/index/index",
+      "params":["a","b"],
+      "maching":"exact"
+    }
+  ],
+  "abc":"1234"
+}

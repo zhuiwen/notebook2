@@ -1,0 +1,63 @@
+<!-- 
+  1. 事件的基本绑定
+    bind+事件名=“函数名”  不能加括号
+ -->
+ <view bindtap="handle1">函数声明形式</view>
+ <view bindtap="handle2">对象的函数简写形式</view>
+ <view bindtap="handle3">箭头函数简写形式</view>
+
+ <!-- 
+   2: 在事件函数中 遇到回调时候可以选择性的用箭头
+  -->
+ <view bindtap="handle4">什么时候用箭头</view>
+
+
+ <!-- 
+   3: 事件类型：
+      冒泡与非冒泡
+      对于 有冒泡的事件
+        bind+冒泡的事件 ： 会形成冒泡
+        catch+冒泡的事件：会阻止冒泡
+
+  -->
+
+  <view class="outer" bindtap="outerHandle">
+      <view class="middle" bindtap="middleHandle">
+          <view class="inner" bindtap="innerrHandle"></view>
+      </view>
+  </view>
+<view>---------------------</view>
+  <view class="outer" bindtap="outerHandle">
+      <view class="middle" catchtap="middleHandle">
+          <view class="inner" bindtap="innerrHandle"></view>
+      </view>
+  </view>
+
+  <!-- 
+    4.事件对象
+      是事件中最复杂的。
+      currentTarget.dataset
+      detail:
+        表单的数据，就在detail去接收。
+   -->
+<view>-----------------------------</view>
+
+   <view bindtap="handle5">事件对象</view>
+   <view id="father" bindtap="handle5">
+      father
+      <view id="son">son</view>
+   </view>
+
+   <!-- 
+     5:关于data-*-* 传参
+        总结：事件绑定在哪个组件上，那么开发想主动传参 就把data-的形式写在此组件上
+        然后通过  事件对象.currentTarget.dataset 接收
+        data-name
+        data-user-name => userName
+        data-bg-color => bgColor
+    -->
+<view>-----------------------------</view>
+ <view id="father" data-name="zbj" bindtap="handle6">
+     传参 father
+      <view id="son">son</view>
+   </view>

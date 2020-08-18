@@ -1,0 +1,14 @@
+/* pages/09event/09event.wxss */
+
+.outer ,.middle,.inner{
+  padding: 50px;
+}
+.outer{
+  background-color: red;
+}
+.middle{
+  background-color: green;
+}
+.inner{
+  background-color: blue;
+}

@@ -1,0 +1,9 @@
+
+<view class="box1">123</view>
+<image src="../../static/banner.jpg" class="img"></image>
+
+<view style="background-color:{{bgColor}}" class="box2">123</view>
+
+<view class="{{className}}">1234</view>
+
+<view class="box4">box4</view>

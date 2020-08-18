@@ -1,0 +1,4 @@
+<view>我是普通的header</view>
+<template name="header">
+<view>我是tempatel中的header</view>
+</template>

@@ -1,0 +1,10 @@
+
+<!-- 
+  include 是引入目录文件的普通的代码块 不会引入template的
+ -->
+<include src="../../public/header.wxml" />
+<!-- <template is="header"></template> -->
+
+<view>我是列表文件的main代码块</view>
+
+<include src="../../public/footer.wxml" />

@@ -1,0 +1,7 @@
+/* pages/07detailpage/07detailpage.wxss */
+
+@import "../../public/public.wxss";
+
+view{
+  color: red;
+}

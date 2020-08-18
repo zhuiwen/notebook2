@@ -1,0 +1,15 @@
+<!-- 
+  wx:key:
+      1： 普通的数据 [11,22,33]   ['web','java','python']
+          保留字|关键字： *this
+      2: [ {goodsid,id},{},{} ]
+          id
+ -->
+
+<view wx:for="{{nums}}" wx:key="*this">
+  {{item}}
+</view>
+
+<view wx:for="{{products}}" wx:key="id">
+{{item.name}}
+</view>

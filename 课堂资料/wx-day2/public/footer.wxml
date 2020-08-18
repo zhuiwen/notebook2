@@ -1,0 +1,5 @@
+<view class="footer">我是普通的footer</view>
+
+<template name="footer">
+<view class="footer">我是tempatel中的footer</view>
+</template>

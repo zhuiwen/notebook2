@@ -1,0 +1,36 @@
+<!-- 
+  1. 基本的条件渲染，条件渲染是一个整体 ，中间不能其它组件
+ -->
+<view wx:if="{{age >= 18}}">成年了</view>
+<view wx:else>呵呵，不要惹熊孩子</view>
+
+<!-- 
+  2. 多分支
+ -->
+
+ <view wx:if="{{ score > 80 && score <= 99 }}">还可以</view>
+ <view wx:elif="{{ score > 60 && score <= 80 }}">不错哦</view>
+ <view wx:else>你要上天啊</view>
+
+ <!-- 
+   3. if vs hidden
+  -->
+  <!-- 
+    hidden
+   -->
+  <view hidden="{{ index != 0 }}">待支付</view>
+  <view hidden="{{index != 1}}">待评论</view>
+  <view hidden="{{index != 2}}">待收货</view>
+
+  <!-- 
+    if
+   -->
+
+   <view wx:if="{{carts.length > 0}}">
+      <view wx:for="{{carts}}">
+        要渲染购物车的数据
+      </view>
+   </view>
+   <view wx:else>
+   空空如也~
+   </view>

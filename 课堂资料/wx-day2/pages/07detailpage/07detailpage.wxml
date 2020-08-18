@@ -1,0 +1,9 @@
+
+<!-- 
+  import:
+    它是引入 template的代码块，不会引入普通的代码
+ -->
+ <import src="../../public/header.wxml" />
+ <import src="../../public/footer.wxml" />
+ <template is="header"></template>
+ <template is="footer"></template>

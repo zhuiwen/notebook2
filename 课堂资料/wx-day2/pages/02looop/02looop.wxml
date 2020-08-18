@@ -1,0 +1,65 @@
+<!-- 
+  1. 基本遍历
+ -->
+ <view wx:for="{{nums}}">
+  当前值：{{item}} --- 当前下标：{{index}}
+ </view>
+<view>-------------------------------------</view>
+ <!-- 
+   2. 遍历对象
+        wx:for-index 指定当前下标的变量
+        wx:for-item 指定当前值的变量
+  -->
+  <view wx:for="{{person}}">
+    当前值为:{{item}} ---  {{index}}
+  </view>
+<view>-------------------------------------</view>
+
+<view wx:for="{{person}}" wx:for-item="value" wx:for-index="key">
+    当前值为:{{value}} ---  {{key}}
+</view>
+
+<view>-------------------------------------</view>
+<!-- 
+  3.在遍历中如果想使用data中的item或index的注意事项
+ -->
+  <view wx:for="{{nums}}" wx:for-item="val">
+  当前值：{{item}} --- 当前下标：{{index}}
+ </view>
+<view>-------------------------------------</view>
+
+ <!-- 
+    4.遍历数组套对象
+  -->
+  <view wx:for="{{products}}">
+    商品名为：{{item.name}} 商品价格：{{item.price}}
+  </view>
+<view>-------------------------------------</view>
+
+  <!-- 
+    5. block -> vue:template
+      代码的搬运工，不会生产代码 。
+   -->
+<block wx:for="{{products}}">
+  <view>{{item.name}}</view>
+   <view>{{item.price}}</view>
+</block>
+ 
+ <!-- 
+   6. 遍历的注意事项
+      关于字符串的问题: 要遍历数组的变量的双大括号外部的前后不要加空格
+  -->
+<view>-------------------------------------</view>
+<view wx:for="{{ nums }}">
+  {{item}}
+</view>
+
+
+<!-- 
+  7. 循环嵌套
+ -->
+ <view wx:for="{{product}}" class="father" wx:for-item="val1">
+    <view wx:for="{{val1}}" class="son" wx:for-item="val2">
+      {{val2.name}} --- {{val2.price}}
+    </view>
+ </view>
